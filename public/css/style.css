@@ -1,0 +1,27 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* END RESET */
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+textarea {
+    width: 20rem;
+    height: 10rem;
+    
+    border-radius: 5px;
+    resize: none;
+}
+
