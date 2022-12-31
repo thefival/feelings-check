@@ -1,13 +1,23 @@
+//built in packages
+const path = require('path')
+
+//third party packages
 const express = require('express')
+const bodyParser = require('body-parser')
 
 const app = express()
 
-app.use('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html')
-})
+const rootDir = require('./util/path')
 
-app.use('/user_input', (req, res) => {
-    console.log(req)
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(express.static(path.join(__dirname, 'public'))) 
+
+const userRoute = require('./routes/user')
+
+app.use('/user-input', userRoute)
+
+app.use('/', (req, res) => {
+    res.sendFile(path.join(rootDir, 'views', 'index.html'))
 })
 
 app.listen(3000)

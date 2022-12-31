@@ -7,17 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feelings Check</title>
 
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
     <section>
-        <div>
-            <form action="/user_input" method="GET">
-                <div id="wrapper">
+        <div id="frm-wrapper">
+            <form action="/user-input" method="POST">
+                <div id="txt-wrapper"> 
                     <textarea name="input" id="input" cols="30" rows="10"></textarea>
-                    <button>Submit</button>
+                    <div id="btn-wrapper">
+                        <button>Tell Us About It</button>
+                    </div>
                 </div>
             </form>
         </div>
