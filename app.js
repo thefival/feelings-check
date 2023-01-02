@@ -17,10 +17,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 const userRoute = require('./routes/user')
 
-app.use('/user-input', userRoute)
+app.use('/log-in', userRoute)
+// app.use('/user-input', userRoute)
 
 app.use('/', (req, res) => {
-    res.sendFile(path.join(rootDir, 'views', 'index.html'))
+    res.sendFile(path.join(rootDir, 'views', 'log-in.html'))
 })
 
 app.listen(3000)
