@@ -2,8 +2,9 @@ const express = require('express')
 
 const router = express.Router()
 
-router.post('/', (req, res) => {
-    console.log(req.body)
-})
+//controllers 
+const userController = require('../controllers/user')
+
+router.post('/', userController.getPost)
 
 module.exports = router

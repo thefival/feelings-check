@@ -4,6 +4,9 @@ const path = require('path')
 //third party packages
 const express = require('express')
 const bodyParser = require('body-parser')
+// const dotenv = require('dotenv')
+
+const db = require('./util/database')
 
 const app = express()
 
